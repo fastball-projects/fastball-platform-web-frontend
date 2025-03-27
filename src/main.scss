@@ -1,0 +1,25 @@
+.ant-pro-layout  {
+    .ant-layout-sider.ant-pro-sider {
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 10px;
+
+        .ant-layout-sider-children {
+            padding-inline: 0;
+            scrollbar-width: thin;
+            scrollbar-color: #e7e9e8 #fff;
+        }
+    }
+
+    .ant-pro-layout-container .ant-pro-layout-content {
+        height: calc(100vh - 56px);
+        padding: 10px;
+        background-color: #eee;
+    }
+}
+
+
+.fastball-web-container {
+    height: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    background: #FFF;
+}
