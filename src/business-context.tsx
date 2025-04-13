@@ -30,7 +30,7 @@ export const BusinessContextSelector: React.FC<BusinessContextSelectorProps> = (
     const fetchData = async () => {
         try {
             const request = buildJsonRequestInfo()
-            const response = await fetch(`/api/portal/web/business-context/${businessContextKey}`, request);
+            const response = await fetch(`/api/portal/business-context/${businessContextKey}`, request);
             const result = await response.json();
             const items: BusinessContextItem[] = result.data;
             if (!getCurrentBusinessContext()) {
