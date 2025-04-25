@@ -38,7 +38,7 @@ const getCurrentUserInfo = async (setCurrentUser: Function) => {
       return;
     }
     if (result.status === 401) {
-      location.href = '/#/login?redirectUrl=' + location.href
+      location.hash = '#/login?redirectUrl=' + location.hash
     } else {
       message.error(`Error ${result.status}: ${result.message}`);
     }
@@ -165,7 +165,7 @@ const Layout: React.FC<RouteComponentProps> = ({ routes, currentUser }) => {
       label: "退出登录",
       onClick: () => {
         localStorage.removeItem(TOKEN_LOCAL_KEY)
-        location.href = '/#/login?redirectUrl=' + location.href
+        location.hash = '#/login?redirectUrl=' + location.hash
       }
     }
   ];

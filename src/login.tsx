@@ -89,7 +89,7 @@ const Login: React.FC = () => {
                 message.success(result.message);
                 localStorage.setItem(TOKEN_LOCAL_KEY, JSON.stringify(result.data));
                 const urlParams = new URL(window.location.href).searchParams;
-                location.href = urlParams.get(REDIRECT_URL_QUERY_KEY) || '/'
+                location.hash = urlParams.get(REDIRECT_URL_QUERY_KEY) || '/'
                 return;
             } else {
                 setLoginFailMessage(result.message);

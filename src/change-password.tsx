@@ -43,7 +43,7 @@ const ChangePasswordForm = () => {
                 message.success("修改成功, 请使用新密码重新登录");
                 localStorage.removeItem(TOKEN_LOCAL_KEY)
                 waitTime(1000)
-                location.href = '/#/login'
+                location.hash = '#/login?redirectUrl=' + location.hash
             } else {
                 message.error(result.message);
             }
